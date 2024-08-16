@@ -21,7 +21,7 @@ This is the frontend of the InterestAndChat application, built using React. It p
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/Partha65/FrontEndIntrestAndChat-.git
+git clone https://github.com/Partha65/FrontEndForIntrestAndChat.git
 ```
 
 # Install Dependencies
