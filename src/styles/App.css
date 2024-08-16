@@ -1,0 +1,96 @@
+/* App.css */
+
+body {
+    background-color: #f5f5f5;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h6, h5 {
+    font-weight: bold;
+  }
+  
+  .MuiPaper-root {
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  }
+  
+  .MuiButton-containedPrimary {
+    background-color: #ff5722;
+    color: #fff;
+    text-transform: none;
+    font-weight: 500;
+    border-radius: 8px;
+    padding: 8px 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .MuiButton-containedPrimary:hover {
+    background-color: #ff7043;
+  }
+  
+  .MuiButton-outlinedPrimary {
+    border-color: #ff5722;
+    color: #ff5722;
+    text-transform: none;
+    border-radius: 8px;
+  }
+  
+  .MuiButton-outlinedPrimary:hover {
+    background-color: rgba(255, 87, 34, 0.1);
+  }
+  
+  .MuiTextField-root {
+    margin-bottom: 16px;
+  }
+  
+  .MuiAppBar-root {
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .MuiTypography-h6 {
+    font-size: 18px;
+  }
+  
+  .container-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  form {
+    width: 100%;
+  }
+  
+  .card-wrapper-login {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    max-width: 420px;
+  }
+  
+  
+  .card-wrapper {
+    height: 300px; /* Set the desired height */
+    overflow: hidden; /* Prevent content from overflowing the card */
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc; /* Optional: add a subtle border */
+    padding: 16px; /* Optional: adjust padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add shadow */
+  }
+  
+  .alert-message {
+    color: red;
+    margin-top: 12px;
+  }
+
+  .card-content {
+    flex-grow: 1; /* Allow the content to grow within the card */
+    overflow-y: auto; /* Enable vertical scrolling */
+    
+  }

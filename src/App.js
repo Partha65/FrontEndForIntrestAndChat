@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import LoginRegister from './components/LoginRegister';
+import Dashboard from './components/Dashboard';
+import Chat from './components/Chat';
+import './styles/App.css';
 
 function App() {
+  const token = localStorage.getItem('token');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        {/* Redirect if not logged in */}
+        <Route
+          path="/"
+          element={token ? <Navigate to="/dashboard" /> : <Navigate to="/login" />}
+        />
+        <Route path="/login" element={!token ? <LoginRegister /> : <Navigate to="/dashboard" />} />
+        <Route path="/register" element={!token ? <LoginRegister /> : <Navigate to="/dashboard" />} />
+        {/* <Route path="/dashboard" element={token ? <Dashboard /> : <Navigate to="/login" />} /> */}
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/chat/:userId" element={<Chat />} />
+        {/* Redirect any other path to login */}
+        <Route path="*" element={<Navigate to="/login" />} />
+      </Routes>
+    </Router>
   );
 }
 
